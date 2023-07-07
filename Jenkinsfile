@@ -14,7 +14,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'chmod +x run.sh'
-        sh 'bash run.sh &'
+        sh 'JENKINS_NODE_COOKIE=dontKillMe nohup npm start &'
       }
     }
   }
