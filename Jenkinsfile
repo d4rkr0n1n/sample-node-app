@@ -8,7 +8,7 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'npm install'
-        sh 'npm install forever -g'
+        sh 'sudo npm install forever -g'
       }
     }  
             
