@@ -14,6 +14,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'forever start index.js'
+        sh 'forever list'
       }
     }
   }
