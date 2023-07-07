@@ -2,6 +2,8 @@
 pipeline {
   agent any
     
+  tools {nodejs "node"}
+
   stages {
      
     stage('Build') {
@@ -13,8 +15,6 @@ pipeline {
             
     stage('Deploy') {
       steps {
-        sh 'forever start index.js'
-        sh 'forever list'
         sh 'node index.js'
       }
     }
