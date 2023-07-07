@@ -13,7 +13,8 @@ pipeline {
             
     stage('Deploy') {
       steps {
-        sh 'pm2 --name HelloWorld start npm -- start'
+        sh 'chmod +x run.sh'
+        sh 'bash run.sh'
       }
     }
   }
