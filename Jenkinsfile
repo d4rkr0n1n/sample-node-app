@@ -13,7 +13,7 @@ pipeline {
             
     stage('Deploy') {
       steps {
-        sh 'node index.js'
+        sh 'sudo node index.js'
       }
     }
   }
