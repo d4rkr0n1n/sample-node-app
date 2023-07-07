@@ -13,7 +13,7 @@ pipeline {
             
     stage('Deploy') {
       steps {
-        sh 'npm start &'
+        sh 'pm2 --name HelloWorld start npm -- start'
       }
     }
   }
