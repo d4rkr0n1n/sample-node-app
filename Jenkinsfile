@@ -14,7 +14,7 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'chmod +x run.sh'
-        sh 'bash run.sh'
+        sh 'bash run.sh &'
       }
     }
   }
