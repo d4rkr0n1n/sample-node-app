@@ -8,13 +8,12 @@ pipeline {
       steps {
         sh 'pwd'
         sh 'npm install'
-        sh 'npm install forever -g'
       }
     }  
             
     stage('Deploy') {
       steps {
-        sh 'node index.js &'
+        sh 'forever start index.js'
       }
     }
   }
