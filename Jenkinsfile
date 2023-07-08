@@ -10,12 +10,11 @@ pipeline {
       }
     }  
             
-            
+
     stage('Deploy') {
       steps {
         sh 'chmod +x run.sh'
-        sh "bash run.sh 3001"
-        sh "bash run.sh 3002"
+        sh "bash run.sh 3001 && bash run.sh 3002"
       }
     }
   }
