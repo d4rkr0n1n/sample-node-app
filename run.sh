@@ -6,5 +6,6 @@ a=$(curl localhost:$1:wq/health-check)
 b='OK'
 until [ "$a" = "$b" ]
 do
+    echo $a
    sleep 1s
 done
