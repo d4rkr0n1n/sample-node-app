@@ -14,10 +14,8 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'chmod +x run.sh'
-        sh "kill -9 $(lsof -i :3001 | grep 3001 | awk '{print \"${5}\"}')"
-        sh 'JENKINS_NODE_COOKIE=dontKillMe PORT=3001 nohup npm run start &'
-        sh "kill -9 $(lsof -i :3002 | grep 3002 | awk '{print \"${5}\"}')"
-        sh 'JENKINS_NODE_COOKIE=dontKillMe PORT=3002 nohup npm run start &'
+        sh "bash run.sh 3001"
+        sh "bash run.sh 3002"
       }
     }
   }
