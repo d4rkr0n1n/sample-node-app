@@ -14,7 +14,8 @@ pipeline {
     stage('Deploy') {
       steps {
         sh 'chmod +x run.sh'
-        sh 'JENKINS_NODE_COOKIE=dontKillMe nohup PORT=8000 npm run restart &'
+        sh 'JENKINS_NODE_COOKIE=dontKillMe'
+        sh 'PORT=8000 nohup npm run restart &'
       }
     }
   }
