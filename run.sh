@@ -5,5 +5,5 @@ JENKINS_NODE_COOKIE=dontKillMe PORT=$port nohup npm run start &
 b='OK'
 until [ "$(curl localhost:$1/health-check)" = "$b" ]
 do
-   sleep 1s
+   sleep 2s
 done
