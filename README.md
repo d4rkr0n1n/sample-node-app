@@ -2,10 +2,10 @@
 
 ### Task-1:
 - [x] take a sample app
-- [x] personal accounbt aws 
 - [x] github 
-- [x] jenkins
+- [x] personal accounbt aws 
 - [x] ubuntu
+- [x] jenkins
 
 ### Task-2:
 - [x] available on route (Custom Domain)
