@@ -17,3 +17,5 @@
 - [x] integerate nginx - highly available - zero downtime
 
 Test: `watch -n 1 curl https://wedsin-demo.d4rkr0n1n.in`
+
+
